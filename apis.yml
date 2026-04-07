@@ -1,13 +1,10 @@
 name: Test Cases
-description: Structured scenarios that verify software functionality by defining inputs,
-  execution conditions, and expected results to ensure quality and correctness. It
-  is widely used by developers to build, maintain, and scale software applications
-  efficiently.
+description: Structured scenarios that verify software functionality by defining inputs, execution conditions, and expected results to ensure quality and correctness. It is widely used by developers to build, maintain, and scale software applications efficiently.
 url: https://en.wikipedia.org/wiki/Test_case
 tags:
-- Testing
-- Quality Assurance
-- Software Development
+  - Quality Assurance
+  - Software Development
+  - Testing
 created: '2025'
 modified: '2026-03-16'
 apis: []
