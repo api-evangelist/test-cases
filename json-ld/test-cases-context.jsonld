@@ -1,0 +1,160 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "testcases": "https://api-evangelist.github.io/test-cases/schema/",
+    "TestCase": "testcases:TestCase",
+    "TestResult": "testcases:TestResult",
+    "TestStep": "testcases:TestStep",
+    "TestSuite": "testcases:TestSuite",
+    "action": {
+      "@id": "testcases:action",
+      "@type": "xsd:string"
+    },
+    "actualResult": {
+      "@id": "testcases:actual_result",
+      "@type": "xsd:string"
+    },
+    "automationStatus": {
+      "@id": "testcases:automation_status",
+      "@type": "xsd:string"
+    },
+    "buildVersion": {
+      "@id": "testcases:build_version",
+      "@type": "xsd:string"
+    },
+    "comment": {
+      "@id": "testcases:comment",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "schema:dateCreated"
+    },
+    "createdBy": {
+      "@id": "testcases:created_by",
+      "@type": "xsd:string"
+    },
+    "defects": {
+      "@id": "testcases:defects",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description"
+    },
+    "durationMs": {
+      "@id": "testcases:duration_ms",
+      "@type": "xsd:integer"
+    },
+    "environment": {
+      "@id": "testcases:environment",
+      "@type": "xsd:string"
+    },
+    "executedAt": {
+      "@id": "testcases:executed_at",
+      "@type": "xsd:dateTime"
+    },
+    "executedBy": {
+      "@id": "testcases:executed_by",
+      "@type": "xsd:string"
+    },
+    "expectedResult": {
+      "@id": "testcases:expected_result",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "dcterms:identifier"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "notes": {
+      "@id": "testcases:notes",
+      "@type": "xsd:string"
+    },
+    "parentSuiteId": {
+      "@id": "testcases:parent_suite_id",
+      "@type": "xsd:string"
+    },
+    "preconditions": {
+      "@id": "testcases:preconditions",
+      "@type": "xsd:string"
+    },
+    "priority": {
+      "@id": "testcases:priority",
+      "@type": "xsd:string"
+    },
+    "projectId": {
+      "@id": "testcases:project_id",
+      "@type": "xsd:string"
+    },
+    "requirementRefs": {
+      "@id": "testcases:requirement_refs",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "screenshotUrl": {
+      "@id": "testcases:screenshot_url",
+      "@type": "@id"
+    },
+    "status": {
+      "@id": "testcases:status",
+      "@type": "xsd:string"
+    },
+    "stepNumber": {
+      "@id": "testcases:step_number",
+      "@type": "xsd:integer"
+    },
+    "stepResults": {
+      "@id": "testcases:step_results",
+      "@container": "@set"
+    },
+    "steps": {
+      "@id": "testcases:steps",
+      "@container": "@set"
+    },
+    "suiteId": {
+      "@id": "testcases:suite_id",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "testcases:tags",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "testCaseId": {
+      "@id": "testcases:test_case_id",
+      "@type": "xsd:string"
+    },
+    "testCaseIds": {
+      "@id": "testcases:test_case_ids",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "testData": {
+      "@id": "testcases:test_data",
+      "@type": "xsd:string"
+    },
+    "testRunId": {
+      "@id": "testcases:test_run_id",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "testcases:title",
+      "@type": "xsd:string"
+    },
+    "totalTestCases": {
+      "@id": "testcases:total_test_cases",
+      "@type": "xsd:integer"
+    },
+    "type": {
+      "@id": "testcases:type",
+      "@type": "xsd:string"
+    },
+    "updatedAt": {
+      "@id": "schema:dateModified"
+    }
+  }
+}

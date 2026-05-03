@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-cases/refs/heads/main/json-schema/test-cases-test-suite-schema.json",
+  "title": "TestSuite",
+  "description": "A collection of related test cases grouped together for organizational, execution, or reporting purposes.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the test suite."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the test suite."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of what the test suite covers and its purpose."
+    },
+    "project_id": {
+      "type": "string",
+      "description": "Identifier of the project this suite belongs to."
+    },
+    "parent_suite_id": {
+      "type": "string",
+      "description": "Identifier of the parent test suite for nested suite hierarchies."
+    },
+    "test_case_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Ordered list of test case identifiers included in this suite."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Labels for filtering and organizing test suites."
+    },
+    "created_by": {
+      "type": "string",
+      "description": "Username of the person who created the test suite."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the suite was created."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the suite was last modified."
+    },
+    "total_test_cases": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of test cases in this suite including nested suites."
+    }
+  },
+  "required": ["id", "name"]
+}

@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-cases/refs/heads/main/json-schema/test-cases-test-result-schema.json",
+  "title": "TestResult",
+  "description": "The outcome of executing a test case, capturing pass/fail status, execution details, and any defects found.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the test result."
+    },
+    "test_case_id": {
+      "type": "string",
+      "description": "Identifier of the test case that was executed."
+    },
+    "test_run_id": {
+      "type": "string",
+      "description": "Identifier of the test run this result belongs to."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["passed", "failed", "blocked", "skipped", "error"],
+      "description": "Overall pass/fail status of the test case execution."
+    },
+    "executed_by": {
+      "type": "string",
+      "description": "Username or identifier of the person or system that executed the test."
+    },
+    "executed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the test was executed."
+    },
+    "duration_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Time taken to execute the test case in milliseconds."
+    },
+    "environment": {
+      "type": "string",
+      "description": "The environment in which the test was executed (e.g., staging, production)."
+    },
+    "build_version": {
+      "type": "string",
+      "description": "Software build version under test when this result was recorded."
+    },
+    "defects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of defect or bug identifiers found during this test execution."
+    },
+    "comment": {
+      "type": "string",
+      "description": "Tester comments or observations about the test execution."
+    },
+    "step_results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/StepResult"
+      },
+      "description": "Results for each individual step within the test case."
+    }
+  },
+  "required": ["id", "test_case_id", "status", "executed_at"],
+  "$defs": {
+    "StepResult": {
+      "type": "object",
+      "properties": {
+        "step_number": {
+          "type": "integer",
+          "description": "The step number this result corresponds to."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["passed", "failed", "blocked", "skipped"],
+          "description": "Status of this individual step."
+        },
+        "actual_result": {
+          "type": "string",
+          "description": "The actual result observed for this step."
+        }
+      },
+      "required": ["step_number", "status"]
+    }
+  }
+}

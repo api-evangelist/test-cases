@@ -1,0 +1,30 @@
+{
+  "id": "sample-id",
+  "title": "Sample Title",
+  "description": "This is a sample description.",
+  "status": "archived",
+  "priority": "medium",
+  "type": "regression",
+  "preconditions": "sample-preconditions",
+  "steps": [
+    {},
+    {},
+    {}
+  ],
+  "expected_result": "sample-expected-result",
+  "actual_result": "sample-actual-result",
+  "tags": [
+    "sample-tags-item",
+    "sample-tags-item"
+  ],
+  "automation_status": "manual",
+  "created_by": "sample-created-by",
+  "created_at": "2025-03-15T14:30:00Z",
+  "updated_at": "2025-03-15T14:30:00Z",
+  "suite_id": "suite-001",
+  "requirement_refs": [
+    "sample-requirement-refs-item",
+    "sample-requirement-refs-item",
+    "sample-requirement-refs-item"
+  ]
+}

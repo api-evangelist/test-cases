@@ -1,0 +1,12 @@
+{
+  "id": "sample-id",
+  "test_case_id": "test_case-001",
+  "step_number": 40,
+  "action": "sample-action",
+  "test_data": "sample-test-data",
+  "expected_result": "sample-expected-result",
+  "actual_result": "sample-actual-result",
+  "status": "passed",
+  "notes": "sample-notes",
+  "screenshot_url": "https://example.com/api/screenshot-url/abc123"
+}

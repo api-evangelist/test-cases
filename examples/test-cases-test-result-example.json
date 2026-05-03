@@ -1,0 +1,20 @@
+{
+  "id": "sample-id",
+  "test_case_id": "test_case-001",
+  "test_run_id": "test_run-001",
+  "status": "error",
+  "executed_by": "sample-executed-by",
+  "executed_at": "2025-03-15T14:30:00Z",
+  "duration_ms": 73,
+  "environment": "staging",
+  "build_version": "1.2.3",
+  "defects": [
+    "sample-defects-item",
+    "sample-defects-item",
+    "sample-defects-item"
+  ],
+  "comment": "This is a sample comment.",
+  "step_results": [
+    {}
+  ]
+}

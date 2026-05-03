@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-cases/refs/heads/main/json-structure/test-cases-test-step-structure.json",
+  "name": "TestStep",
+  "description": "A single executable step within a test case, defining an action to perform and the expected result.",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the test step.",
+      "type": "string"
+    },
+    "test_case_id": {
+      "description": "Identifier of the parent test case this step belongs to.",
+      "type": "string"
+    },
+    "step_number": {
+      "minimum": 1,
+      "description": "Ordinal position of this step within the test case.",
+      "type": "int32"
+    },
+    "action": {
+      "description": "The specific action to perform during this test step.",
+      "type": "string"
+    },
+    "test_data": {
+      "description": "Input data or test values to use when performing the action.",
+      "type": "string"
+    },
+    "expected_result": {
+      "description": "The expected outcome after performing the action.",
+      "type": "string"
+    },
+    "actual_result": {
+      "description": "The actual observed result when the step was executed.",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "not-executed",
+        "passed",
+        "failed",
+        "blocked",
+        "skipped"
+      ],
+      "description": "Execution status of the test step.",
+      "type": "string"
+    },
+    "notes": {
+      "description": "Additional notes or observations recorded during step execution.",
+      "type": "string"
+    },
+    "screenshot_url": {
+      "description": "URL to a screenshot or evidence captured during step execution.",
+      "type": "uri"
+    }
+  },
+  "required": [
+    "step_number",
+    "action",
+    "expected_result"
+  ],
+  "type": "object"
+}

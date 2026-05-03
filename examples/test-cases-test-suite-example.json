@@ -1,0 +1,18 @@
+{
+  "id": "sample-id",
+  "name": "Sample Name",
+  "description": "This is a sample description.",
+  "project_id": "project-001",
+  "parent_suite_id": "parent_suite-001",
+  "test_case_ids": [
+    "sample-test-case-ids-item"
+  ],
+  "tags": [
+    "sample-tags-item",
+    "sample-tags-item"
+  ],
+  "created_by": "sample-created-by",
+  "created_at": "2025-03-15T14:30:00Z",
+  "updated_at": "2025-03-15T14:30:00Z",
+  "total_test_cases": 27
+}

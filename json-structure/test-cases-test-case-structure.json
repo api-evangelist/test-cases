@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-cases/refs/heads/main/json-structure/test-cases-test-case-structure.json",
+  "name": "TestCase",
+  "description": "A structured test scenario that defines inputs, execution steps, and expected results to verify software functionality.",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the test case.",
+      "type": "string"
+    },
+    "title": {
+      "description": "Short descriptive title for the test case.",
+      "type": "string"
+    },
+    "description": {
+      "description": "Detailed description of what the test case verifies.",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "deprecated",
+        "archived"
+      ],
+      "description": "Current lifecycle status of the test case.",
+      "type": "string"
+    },
+    "priority": {
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ],
+      "description": "Priority level of the test case for execution ordering.",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "functional",
+        "regression",
+        "smoke",
+        "acceptance",
+        "integration",
+        "performance",
+        "security",
+        "usability"
+      ],
+      "description": "Category of testing performed by this test case.",
+      "type": "string"
+    },
+    "preconditions": {
+      "description": "Conditions that must be true before the test case can be executed.",
+      "type": "string"
+    },
+    "steps": {
+      "description": "Ordered list of steps to execute the test case.",
+      "items": {
+        "$ref": "#/definitions/TestStep"
+      },
+      "type": "array"
+    },
+    "expected_result": {
+      "description": "The expected outcome when the test case is executed successfully.",
+      "type": "string"
+    },
+    "actual_result": {
+      "description": "The actual outcome observed during test execution.",
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "description": "Labels for categorizing and filtering test cases.",
+      "type": "array"
+    },
+    "automation_status": {
+      "enum": [
+        "manual",
+        "automated",
+        "to-be-automated"
+      ],
+      "description": "Whether the test case is manual, automated, or planned for automation.",
+      "type": "string"
+    },
+    "created_by": {
+      "description": "Username or identifier of the person who created the test case.",
+      "type": "string"
+    },
+    "created_at": {
+      "description": "ISO 8601 timestamp when the test case was created.",
+      "type": "datetime"
+    },
+    "updated_at": {
+      "description": "ISO 8601 timestamp when the test case was last updated.",
+      "type": "datetime"
+    },
+    "suite_id": {
+      "description": "Identifier of the test suite this test case belongs to.",
+      "type": "string"
+    },
+    "requirement_refs": {
+      "items": {
+        "type": "string"
+      },
+      "description": "References to requirements or user stories this test case covers.",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "status",
+    "priority"
+  ],
+  "definitions": {
+    "TestStep": {
+      "properties": {
+        "step_number": {
+          "description": "Ordinal position of this step in the test case.",
+          "type": "int32"
+        },
+        "action": {
+          "description": "The action to perform in this step.",
+          "type": "string"
+        },
+        "expected_result": {
+          "description": "The expected result after performing this step.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "step_number",
+        "action",
+        "expected_result"
+      ],
+      "type": "object",
+      "name": "TestStep"
+    }
+  },
+  "type": "object"
+}
