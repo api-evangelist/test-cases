@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Postman API (Test Cases)",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Api-Key",
+      "value": "{{X-Api-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List collections (containing test cases)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/collections"
+      },
+      "docs": "List collections (containing test cases)"
+    },
+    {
+      "info": {
+        "name": "Create a collection",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.getpostman.com/collections",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a collection"
+    },
+    {
+      "info": {
+        "name": "Get a collection",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/collections/:collection_uid",
+        "params": [
+          {
+            "name": "collection_uid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a collection"
+    },
+    {
+      "info": {
+        "name": "List environments used by test cases",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/environments"
+      },
+      "docs": "List environments used by test cases"
+    },
+    {
+      "info": {
+        "name": "Get an environment",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/environments/:environment_uid",
+        "params": [
+          {
+            "name": "environment_uid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get an environment"
+    },
+    {
+      "info": {
+        "name": "List mock servers used in test cases",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.getpostman.com/mocks"
+      },
+      "docs": "List mock servers used in test cases"
+    }
+  ],
+  "bundled": true
+}
