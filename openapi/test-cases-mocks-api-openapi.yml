@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: Postman API (Test Cases) Collections Mocks API
+  description: Subset of the Postman API used to manage collections, environments, and mock servers that hold individual test cases executed by Newman and Postman scripts. Base URL https://api.getpostman.com, authenticated with the X-Api-Key header.
+  version: v1
+  contact:
+    name: Postman API
+    url: https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
+servers:
+- url: https://api.getpostman.com
+security:
+- apiKey: []
+tags:
+- name: Mocks
+paths:
+  /mocks:
+    get:
+      summary: List mock servers used in test cases
+      operationId: listMocks
+      responses:
+        '200':
+          description: Mock servers listed.
+      tags:
+      - Mocks
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
