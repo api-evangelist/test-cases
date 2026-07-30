@@ -1,3 +1,17 @@
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/test-cases.png
 name: Test Cases
 description: Structured scenarios that verify software functionality by defining inputs, execution conditions, and expected results to ensure quality and correctness. Test cases are the fundamental units of software testing that document what needs to be tested, the conditions under which the test runs, and the expected outcomes. They are widely used across manual testing, automated testing, and API testing workflows.
 url: https://en.wikipedia.org/wiki/Test_case
@@ -11,82 +25,129 @@ tags:
 created: '2025'
 modified: '2026-05-03'
 apis:
-  - name: Postman API
-    description: API for managing Postman collections, environments, monitors, mock servers, and test runs programmatically. Supports creating and executing test cases via Newman and Postman scripts.
-    humanURL: https://www.postman.com/postman/workspace/postman-public-workspace/collection/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
-    baseURL: https://api.getpostman.com
-    tags:
-      - API Testing
-      - Collections
-      - Environments
-      - Test Automation
-    properties:
-      - type: Documentation
-        url: https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
-  - name: TestRail API
-    description: REST API for TestRail test case management system, enabling programmatic creation, update, and retrieval of test cases, test runs, test plans, and results.
-    humanURL: https://www.testrail.com/api
-    baseURL: https://yourproject.testrail.io/index.php?/api/v2
-    tags:
-      - Test Case Management
-      - Test Management
-      - Test Runs
-      - Testing
-    properties:
-      - type: Documentation
-        url: https://support.testrail.com/hc/en-us/articles/7077990413588-Introduction-to-the-API
-      - type: APIReference
-        url: https://support.testrail.com/hc/en-us/categories/7076832415124-API-Reference
-  - name: Zephyr Scale API
-    description: REST API for Zephyr Scale test management in Jira Cloud, supporting test case creation, test cycles, test execution, and reporting within Jira.
-    humanURL: https://support.smartbear.com/zephyr-scale-cloud/api-docs/
-    baseURL: https://api.zephyrscale.smartbear.com/v2
-    tags:
-      - Jira
-      - Test Case Management
-      - Test Management
-      - Testing
-    properties:
-      - type: Documentation
-        url: https://support.smartbear.com/zephyr-scale-cloud/api-docs/
-  - name: Xray Test Management API
-    description: REST API for Xray test management in Jira, supporting test case management, test execution, test coverage, and CI/CD integration for structured test case workflows.
-    humanURL: https://docs.getxray.app/display/XRAYCLOUD/REST+API
-    baseURL: https://xray.cloud.getxray.app/api/v2
-    tags:
-      - Behavior-Driven Development
-      - Jira
-      - Test Case Management
-      - Test Execution
-    properties:
-      - type: Documentation
-        url: https://docs.getxray.app/display/XRAYCLOUD/REST+API
-  - name: PractiTest API
-    description: REST API for PractiTest test management platform supporting test case libraries, test runs, requirements, defects, and full quality management workflows.
-    humanURL: https://developers.practitest.com
-    baseURL: https://api.practitest.com/api/v2
-    tags:
-      - Quality Management
-      - Requirements
-      - Test Case Management
-      - Testing
-    properties:
-      - type: Documentation
-        url: https://developers.practitest.com
-      - type: APIReference
-        url: https://developers.practitest.com/docs/api-reference
-  - name: Katalon TestOps API
-    description: API for Katalon TestOps test automation platform, providing endpoints for test case management, test execution, reports, and integration with CI/CD pipelines.
-    humanURL: https://katalon.com
-    baseURL: https://testops.katalon.io/api/v1
-    tags:
-      - CI/CD Integration
-      - Test Automation
-      - Test Case Management
-      - Testing
-    properties:
-      - type: Documentation
-        url: https://docs.katalon.com/docs/katalon-testops/remote-execution/katalon-testops-api
+- name: Postman API
+  description: >-
+    API for managing Postman collections, environments, monitors, mock servers, and test runs programmatically.
+    Supports creating and executing test cases via Newman and Postman scripts.
+  humanURL: >-
+    https://www.postman.com/postman/workspace/postman-public-workspace/collection/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
+  baseURL: https://api.getpostman.com
+  tags:
+  - API Testing
+  - Collections
+  - Environments
+  - Test Automation
+  properties:
+  - type: Documentation
+    url: >-
+      https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
+- name: TestRail API
+  description: >-
+    REST API for TestRail test case management system, enabling programmatic creation, update, and retrieval
+    of test cases, test runs, test plans, and results.
+  humanURL: https://www.testrail.com/api
+  baseURL: https://yourproject.testrail.io/index.php?/api/v2
+  tags:
+  - Test Case Management
+  - Test Management
+  - Test Runs
+  - Testing
+  properties:
+  - type: Documentation
+    url: https://support.testrail.com/hc/en-us/articles/7077990413588-Introduction-to-the-API
+  - type: APIReference
+    url: https://support.testrail.com/hc/en-us/categories/7076832415124-API-Reference
+- name: Zephyr Scale API
+  description: >-
+    REST API for Zephyr Scale test management in Jira Cloud, supporting test case creation, test cycles,
+    test execution, and reporting within Jira.
+  humanURL: https://support.smartbear.com/zephyr-scale-cloud/api-docs/
+  baseURL: https://api.zephyrscale.smartbear.com/v2
+  tags:
+  - Jira
+  - Test Case Management
+  - Test Management
+  - Testing
+  properties:
+  - type: Documentation
+    url: https://support.smartbear.com/zephyr-scale-cloud/api-docs/
+- name: Xray Test Management API
+  description: >-
+    REST API for Xray test management in Jira, supporting test case management, test execution, test coverage,
+    and CI/CD integration for structured test case workflows.
+  humanURL: https://docs.getxray.app/display/XRAYCLOUD/REST+API
+  baseURL: https://xray.cloud.getxray.app/api/v2
+  tags:
+  - Behavior-Driven Development
+  - Jira
+  - Test Case Management
+  - Test Execution
+  properties:
+  - type: Documentation
+    url: https://docs.getxray.app/display/XRAYCLOUD/REST+API
+- name: PractiTest API
+  description: >-
+    REST API for PractiTest test management platform supporting test case libraries, test runs, requirements,
+    defects, and full quality management workflows.
+  humanURL: https://developers.practitest.com
+  baseURL: https://api.practitest.com/api/v2
+  tags:
+  - Quality Management
+  - Requirements
+  - Test Case Management
+  - Testing
+  properties:
+  - type: Documentation
+    url: https://developers.practitest.com
+  - type: APIReference
+    url: https://developers.practitest.com/docs/api-reference
+- name: Katalon TestOps API
+  description: >-
+    API for Katalon TestOps test automation platform, providing endpoints for test case management, test
+    execution, reports, and integration with CI/CD pipelines.
+  humanURL: https://katalon.com
+  baseURL: https://testops.katalon.io/api/v1
+  tags:
+  - CI/CD Integration
+  - Test Automation
+  - Test Case Management
+  - Testing
+  properties:
+  - type: Documentation
+    url: https://docs.katalon.com/docs/katalon-testops/remote-execution/katalon-testops-api
+- aid: test-cases:test-cases-collections-api
+  name: Test Cases Collections API
+  description: The Collections API from Test Cases — 2 operation(s) for collections.
+  humanURL: >-
+    https://www.postman.com/postman/workspace/postman-public-workspace/collection/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
+  baseURL: https://api.getpostman.com
+  tags:
+  - Collections
+  properties:
+  - type: OpenAPI
+    url: openapi/test-cases-collections-api-openapi.yml
+- aid: test-cases:test-cases-environments-api
+  name: Test Cases Environments API
+  description: The Environments API from Test Cases — 2 operation(s) for environments.
+  humanURL: >-
+    https://www.postman.com/postman/workspace/postman-public-workspace/collection/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
+  baseURL: https://api.getpostman.com
+  tags:
+  - Environments
+  properties:
+  - type: OpenAPI
+    url: openapi/test-cases-environments-api-openapi.yml
+- aid: test-cases:test-cases-mocks-api
+  name: Test Cases Mocks API
+  description: The Mocks API from Test Cases — 1 operation(s) for mocks.
+  humanURL: >-
+    https://www.postman.com/postman/workspace/postman-public-workspace/collection/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
+  baseURL: https://api.getpostman.com
+  tags:
+  - Mocks
+  properties:
+  - type: OpenAPI
+    url: openapi/test-cases-mocks-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/test-cases-agentic-access.yml
