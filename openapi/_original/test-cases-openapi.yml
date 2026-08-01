@@ -1,0 +1,85 @@
+openapi: 3.1.0
+info:
+  title: Postman API (Test Cases)
+  description: >-
+    Subset of the Postman API used to manage collections, environments, and
+    mock servers that hold individual test cases executed by Newman and Postman
+    scripts. Base URL https://api.getpostman.com, authenticated with the
+    X-Api-Key header.
+  version: "v1"
+  contact:
+    name: Postman API
+    url: https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
+servers:
+  - url: https://api.getpostman.com
+security:
+  - apiKey: []
+paths:
+  /collections:
+    get:
+      summary: List collections (containing test cases)
+      operationId: listCollections
+      responses:
+        '200':
+          description: Collections listed.
+    post:
+      summary: Create a collection
+      operationId: createCollection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                collection:
+                  type: object
+      responses:
+        '200':
+          description: Collection created.
+  /collections/{collection_uid}:
+    get:
+      summary: Get a collection
+      operationId: getCollection
+      parameters:
+        - name: collection_uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Collection returned.
+  /environments:
+    get:
+      summary: List environments used by test cases
+      operationId: listEnvironments
+      responses:
+        '200':
+          description: Environments listed.
+  /environments/{environment_uid}:
+    get:
+      summary: Get an environment
+      operationId: getEnvironment
+      parameters:
+        - name: environment_uid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Environment returned.
+  /mocks:
+    get:
+      summary: List mock servers used in test cases
+      operationId: listMocks
+      responses:
+        '200':
+          description: Mock servers listed.
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key

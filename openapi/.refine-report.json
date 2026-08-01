@@ -1,0 +1,18 @@
+{
+  "provider": "test-cases",
+  "sources": [
+    "test-cases-collections-api-openapi.yml",
+    "test-cases-environments-api-openapi.yml",
+    "test-cases-mocks-api-openapi.yml"
+  ],
+  "outputs": [
+    "test-cases-collections-api-openapi.yml",
+    "test-cases-environments-api-openapi.yml",
+    "test-cases-mocks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
