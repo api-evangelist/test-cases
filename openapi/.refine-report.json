@@ -1,9 +1,7 @@
 {
   "provider": "test-cases",
   "sources": [
-    "test-cases-collections-api-openapi.yml",
-    "test-cases-environments-api-openapi.yml",
-    "test-cases-mocks-api-openapi.yml"
+    "_original/test-cases-openapi.yml"
   ],
   "outputs": [
     "test-cases-collections-api-openapi.yml",
@@ -14,10 +12,22 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "test-cases-collections-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "test-cases-environments-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "test-cases-mocks-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "test-cases-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "test-cases-openapi.yml: tagged paths GET /collections -> Collections",
+    "test-cases-openapi.yml: tagged paths POST /collections -> Collections",
+    "test-cases-openapi.yml: tagged paths GET /collections/{collection_uid} -> Collections",
+    "test-cases-openapi.yml: tagged paths GET /environments -> Environments",
+    "test-cases-openapi.yml: tagged paths GET /environments/{environment_uid} -> Environments",
+    "test-cases-openapi.yml: tagged paths GET /mocks -> Mocks",
+    "test-cases-openapi.yml: declared missing tag: Collections",
+    "test-cases-openapi.yml: declared missing tag: Environments",
+    "test-cases-openapi.yml: declared missing tag: Mocks",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "test-cases-collections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "test-cases-environments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "test-cases-mocks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
