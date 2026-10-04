@@ -178,6 +178,9 @@ apis:
   - type: OpenAPI
     url: openapi/test-cases-mocks-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/test-cases-capability-edges.yml
+    name: Test Cases Business Capability Map
   - type: AgenticAccess
     url: agentic-access/test-cases-agentic-access.yml
   - type: TrustCenter
