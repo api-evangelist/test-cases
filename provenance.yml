@@ -9,6 +9,9 @@ artifacts:
   authentication/test-cases-authentication.yml:
     method: derived
     evidence: declared in the artifact
+  capabilities/test-cases-capability-edges.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/test-cases-collections-api.opencollection.json:
     method: derived
     evidence: openapi/test-cases-collections-api
